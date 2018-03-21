@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head> <meta charset="utf-8">
+	<meta name="author" content="Johana">
+	<meta name="description" content="Examen2">
+	<meta name="Keywords" content="Examen2,propio,documento">
+	<link rel="stylesheet" type="text/css" href="stylesheets/hospital.css">
+	<script type="text/javascript" src="javascripts/hospital.js"></script>
+
+	<title>HOSPITAL</title>
+</head>
+
+<body>
+	<!-- Inicio de la cabecera en imagen y titulo de la pagina -->
+	<header>
+		<figure >
+			<img src="images/hospLeon.jpg" alt="hospitalLeon" height="200" width="400">
+			<figcaption> Fachada principal del Hospital Universitario de León </figcaption>
+		</figure>
+			 
+	</header>
+	<!-- Inicio de la cabecera en imagen y titulo de la pagina -->
+
+	
+	<h1> HOSPITAL UNIVERSITARIO DE LEON </h1>
+
+	<!-- Inicio de la seccion para el formulario -->
+	<section>
+		<form id="fondo"  action="/hospital" name="hospital" method="post" onsubmit="return valDatosForm();">
+				<fieldset>
+
+					<!-- Datos del paciente -->
+					<p>
+			 			<legend id="datos"> Datos Paciente: </legend>
+			 		</p>
+
+					<label for="nombre"> Introduzca nombre del paciente: </label>
+					<input type="text" name="nombre" id="nombre"  size="20" length="20" required>
+					<p id="avisoNombre"></p>
+
+					<br><label for="apellido1"> Primer apellido del paciente: </label>
+					<input type="text" name="apellido1" id="apellido1" required>
+					<p id="avisoPrimerApellido"></p> 
+					
+					<br><label for="apellido2"> Segundo apellido del paciente: </label>
+					<input type="text" name="apellido2" id="apellido2" required>
+					<p id="avisoSegundoApellido"></p>
+
+					<br><label for="dni">DNI del paciente: </label>
+					<input type="text" name="dni" id="dni" length="10" required>
+					<p id="avisoDni"></p> 
+					
+
+					<!-- required onimput="valDatosForm(); -->
+					<br><label for="ss">Número Seguridad Social del paciente: </label>
+					<input type="text" name="ss" id="ss" length="12" required>
+					<p id="avisoSeguridadS"></p>
+					<!-- Fin datos del paciente -->
+
+				<!-- Elegir una opción según última visita al hospital -->
+				<p>
+					<br><label for="ultvisita">Ultima visita al hospital: </label>
+						<select id="visitaId" name="visitaN">
+							<option selected="true" defailt.disabled="true"> Seleccione una opción
+							</option>
+							<option value="mas" id="masId">Más de un año
+							</option>
+							<option value="menos" id="menosId"> Menos de un año
+							</option>
+							<option value="nunca" id="nuncaId"> Nunca	
+						</select>
+						<p id="avisoVisita"></p>
+				</p>
+				
+				<!-- Fin de elegir una opción según última visita al hospital -->
+
+
+
+					<!-- Elegir una dde las opciones según la dolencia -->
+				<p>
+					<br><legend > Dolencias del paciente: </legend>
+					<br><input type="checkbox" name="nFiebre" id="fiebreId">
+					<label> Fiebre: </label>
+					<br><input type="checkbox" name="nDolorMuscular" id="dolorMuscularId">
+					<label> Dolor Muscular: </label>
+					<br><input type="checkbox" name="ndolorEstomacal" id="dolorEstomacalId">
+					<label> Dolor Estomacal: </label>
+					<br><input type="checkbox" name="nVomitos" id="vomitosId">
+					<label> Vómitos: </label>
+					<br><input type="checkbox" name="nMareos" id="mareosId">
+					<label> Mareos: </label>
+					<br><input type="checkbox" name="nHipertension" id="hipertencionId">
+					<label> Hipertensión: </label>
+					<br><input type="checkbox" name="nTraumatismos" id="traumatismosId">
+					<label> Traumatismos: </label>
+					<br><input type="checkbox" name="nPerdidaSensibilidad" id="perdidaSensibilidadId">
+					<label> Perdida de sensibilidad: </label>
+					<br><input type="checkbox" name="nInsufucienciaCardiaca" id="insuficienciaCardiacaId">
+					<label> Insuficiencia Cardiaca: </label>
+					<br><input type="checkbox" name="nInsuficienciaRespiratoria" id="insuficienciaRespiratoriaId">
+					<label> Insuficiencia respiratoria: </label>
+					<br><input type="checkbox" name="nOtras" id="otrasDolenciasId">
+					<label> Otras dolencias: </label>
+					<p id="avisoDolencias"></p>
+				</p>
+					<!-- Fin elegir una dde las opciones según la dolencia -->
+
+					<!-- Hora,fecha y dias de estancia del paciente -->
+					<br><label for="hora"> Hora Ingreso: </label>
+					<input type="text" name="nkk" id="hora" readonly >
+					<br><label for="fechaingreso"> Fecha de ingreso: </label>
+					<input type="text" readonly  name="nn" id="fechaingreso">
+					<br><label for="dias"> Dias de estancia: </label>
+					<input type="text" name="dias" readonly id="dias" >
+				</fieldset>
+
+				<!-- En está opción salta algun error a la hora de enviar los datos -->
+				<p>
+					<input type="text" id="salidaErr"  size="80" maxlength="80" readonly>
+				</p>
+					
+
+				<!-- Botones de Alta o nuevo paciente -->
+				<p>
+					<br>
+					<input type="submit" value="AltaPaciente">
+					<input type="reset" value="NuevoPaciente">
+				</p>
+				<!-- Fin botones de Alta o nuevo paciente -->
+
+		</form>
+	</section>
+
+	<footer>
+		©Copyright 2018
+	</footer>
+
+</body>
+</html>
+
+<!-- Fin del Examen 2 de html -->

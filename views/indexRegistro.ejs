@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<meta charset="utf-8">
+	<meta name="author" content="Johana">
+	<meta name="description" content="Examen registro de datos">
+	<meta name="Keywords" content="Ejercicio,propio,documento">
+	<link rel="stylesheet" type="text/css" href="stylesheets/datosregistro.css">
+	<script type="text/javascript" src="javascripts/datosregistro.js"></script>
+
+	<title> Registro </title>
+</head>
+<body>
+	<header>
+			<!-- datos del registro-->
+			<h3> DATOS DE REGISTRO </h3>
+
+	</header>
+
+	<!-- Inicio de la sección para el fromulario -->
+	<section>
+<form name="nRegistro" method="post" action="registro" onsubmit="return valDatosForm();">
+				<fieldset>
+					<p>
+						<label for="email">E-mail:</label>
+						<br><input type="email" name="correo" id="email" size="80" maxlength="80" onchange="validarEmail()" required><br>
+						<p id="avisoEmail"></p>
+					</p>
+
+					<p>
+						<br><label for="alias"> Alias*:</label>
+						<br><input type="text" name="alias" id="alias" size="80" maxlength="80" required>
+						<br><label for="remarcado"> *El nombre que aparecerá si deja sus comentarios en elEconomista.es y Ecotrader </label>
+						<p id="avisoAlias"></p>
+					</p>
+
+					<p>
+						<br><label for="contrasena"> Contraseña: </label>
+						<br><input type="password" name="contrasena" id="contrasena" size="80" maxlength="80" required>
+						<p id="avisoContrasena"></p>
+					</p>
+
+					<p>
+						<br><label for="repcont"> Repetir contraseña: </label>
+						<br><input type="password" name="repcont" id="repetir" size="80" maxlength="80"  required>
+						<p id="avisoContrasenaDistinta"> </p>
+					</p>
+					<!--Fin de los datos del registro.-->
+
+				<!-- Preguntas para recordar contraseña -->
+				<h3> RECORDATORIO DE CONTRASEÑA </h3>
+
+					<select id="preguntaId" name="npregunta">
+						<option selected="true" defailt.disabled="true"> Seleccione una pregunta
+						</option>
+						<option value="fechanacimiento" id="nacimientoId"> ¿Tu fecha de nacimiento?
+						</option>
+						<option value="colorfavorito" id="colorId"> ¿Tu color favorito?
+						</option>
+						<option value="abuelamaterna" id="abuelaId"> ¿Como se llama tu abuela materna?
+						<option value="telefonomovil" id="movilId"> ¿Cual es tu número de teléfono móvil? 
+						</option>
+						<option value="dni" id="dniId"> ¿Tu DNI?
+						</option>
+						<option value="telefonoempresa" id="empresaId"> ¿Cual es tu número de teléfono de empresa?
+						</option>						
+					</select>
+					<p id="avisoPregunta"></p>
+				<!-- Fin de las preguntas para recordar contraseña -->
+
+					<!--Inicio para la respuesta a la pregunta anterior -->
+					<p>
+						<label for="respuesta"> Respuesta:</label>
+						<br><input type="text" name="respuesta" id="respuesta" size="80" maxlength="80" required>
+						<p id="avisoRespuesta"></p>
+					</p>
+					<!--Fin para la respuesta a la pregunta anterior -->
+
+					<p>
+						<br><legend> Suplemento: <legend/>
+						<br><input type="checkbox" name="actualidadN" id="actualidadId">
+						<label> Actualidad </label>
+						<br><input type="checkbox" name="economiaN" id="economiaId">
+						<label> Economíar</label>
+						<br><input type="checkbox" name="internacionalN" id="internacionalId">
+						<label> Internacional </label>
+						<br><input type="checkbox" name="deportesN" id="deportesId">
+						<label> Deportes</label>
+						<br><input type="checkbox" name="culturaN" id="culturaId">
+						<label> Cultura</label>
+						<br><input type="checkbox" name="tecnologiaN" id="tecnologiaId">
+						<label> Tecnología </label>
+						<br><input type="checkbox" name="saludN" id="saludId">
+						<label> Salud </label>
+						<br><input type="checkbox" name="opinionN" id="opinionId">
+						<label> Opinión </label>
+					</p>
+
+					<p>
+						<br><label for="impTotal">pagoTotal:</label>
+						<input type="text" name="importen" id="impTotal" readonly>
+					</p>
+					<p>
+						<br><label for="tarjeta">Número de tarjeta: </label>
+						<input type="text" name="tarjetaN" id="tarjetaId1" size="4" maxlength="4" required>
+						<input type="text" name="tarjetaN" id="tarjetaId2" size="4" maxlength="4" required>
+						<input type="text" name="tarjetaN" id="tarjetaId3" size="4" maxlength="4" required>
+						<input type="text" name="tarjetaN" id="tarjetaId4" size="4" maxlength="4" required>
+					</p>
+					</fieldset>	
+			<!-- Inicio para marcar casilla de politica de privacidad y enviar -->
+			<p>
+				<label> Acepto la politica de privacidad y las condiciones de la presentación </label>
+				<input type="checkbox" name="boton" id="casilla" onchange="habilitar()" >
+				<br>
+				<input type="submit" value="Enviar" id="boton" disabled>
+			</p>
+			<!-- Fin para marcar casilla de politica de privacidad y enviar -->
+
+			</form>
+		</section>
+		<!-- Fin de la seccion del formulario. -->
+
+
+		<!-- Inicio del footer-->
+	<footer>
+		 ©Copyright 2018
+	</footer>
+		<!-- Fin del footer-->
+
+</body>
+</html>
+
+<!-- Final de la práctica html -->

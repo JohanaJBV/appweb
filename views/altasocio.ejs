@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<meta charset="utf-8">
+	<meta charset="utf-8">
+	<meta name="author" content="Johana">
+	<meta name="description" content="Examen1">
+	<meta name="Keywords" content="Examen1,propio,documento">
+	<link rel="stylesheet" type="text/css" href="stylesheets/examen.css">
+	<script type="text/javascript" src="javascripts/cultural.js"></script>
+
+<title> Socio </title>
+</head>
+
+
+<body>
+	<!-- Inicio de la seccion para el formulario --> 
+	<section>
+
+		<!-- Inicio del formulario -->
+		<form name="text"  method="get" onsubmit="return valDatosForm();">
+			
+			<fieldset id="bd"> <!-- id para el css -->
+			
+		<!-- Lugar donde se quiere sentar el socio en el estadio -->			
+		<h2> LOCALIZACIÓN: </h2>
+			
+				<p>
+					<input type="radio" name="localizacion" id="zona">
+						<label for="zona" >Preferencia este</label>
+					<input type="radio" name="localizacion" id="zona">
+						<label for="zona"> Preferencia oeste </label>
+					<input type="radio" name="localizacion" id="zona">
+						<label for="zona"> Fondo sur </label>
+					<input type="radio" name="localizacion" id="zona">
+						<label for="zona"> Fondo norte </label>
+					<input type="radio" name="localizacion" id="zona">
+						<label for="zona"> Palco </label>
+					<input type="radio" name="localizacion" id="zona">
+						<label for="zona"> Tribuna este </label>
+					<input type="radio" name="localizacion" id="zona">
+						<label for="zona"> Tribuna oeste </label
+						>
+					<input type="radio" name="localizacion" id="zona">
+						<label for="zona"> Flexible </label>
+				</p>
+		<!-- Fin del Lugar donde se quiere sentar el socio en el estadio -->
+
+
+					<figure id="dp">
+						<img src="../images/precios.jpg" height="800" >
+					</figure>
+
+			</fieldset>
+
+			<!-- Tipo de socio -->
+			<fieldset id="bd">
+				<p>
+					<label for="socio" id="dp">TIPO DE SOCIO:</label>
+						<select id="socioId">
+							<option value="tipo1"> Escualas deportivas </option>
+							<option value="tipo1"> Junior </option>
+							<option value="tipo1"> Jupiter </option>
+							<option value="tipo1"> Adulto </option>
+							<option value="tipo1"> Jubilado </option>
+						</select>
+				</p>
+			</fieldset>
+			<!-- Fin del tipo de socio -->
+
+			<fieldset id="bd">
+		<!-- Datos personales del socio -->
+		<h2> DATOS PERSONALES: </h2>
+
+						<label for="datospersonales" id=dp> Nombre :</label>
+							<input type="text" name="datospersonales" id="nombreId" required="">
+						<br><label for="datospersonales" id=dp>Apellido:</label>
+							<input type="text" name="datospersonales" id="apellidoId" required="">
+						<br><label for="email" id=dp> Mail  :</label>
+							<input type="text" name="emailN" id="emailId" required="">
+						<br><label for="datospersonales" id=datosper> Teléfono:</label>
+							<input type="text" name="telefonoN" id="telefonoId" required="">
+
+			</fieldset>
+		<!-- Fin de datos personales del socio -->
+
+		<!-- Botones de enviar o borrar datos -->
+				<p>
+					<br><input type="submit" value="aupaCultural">
+						<input type="reset" value="borrar datos">
+				</p>
+		<!-- Fin de los botones de enviar o borrar datos -->
+
+		</form>
+		<!-- Fin del formulario -->
+
+	</section>
+	<!-- Fin de la seccion para el formulario --> 
+
+</body>
+</html>
+<!-- Fin de la practica del examen 1 -->
